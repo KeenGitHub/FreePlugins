@@ -7,7 +7,6 @@ local PLUGIN = PLUGIN;
 local SCHEMA = SCHEMA;
 local ciD
 
--- This code is modified from ExT's UberFactory. Dunno if he made it or not, but credit goes to him still.
 
 function PLUGIN:SaveTerminals()
 	local terminals = {};
@@ -20,11 +19,11 @@ function PLUGIN:SaveTerminals()
 		};
 	end;
 	
-	Clockwork.kernel:SaveSchemaData("plugins/pterminals/"..game.GetMap(), terminals);
+	Clockwork.kernel:SaveSchemaData("plugins/Teriyakiterminals/"..game.GetMap(), terminals);
 end;
 
 function PLUGIN:LoadTerminals()
-	local terminals = Clockwork.kernel:RestoreSchemaData( "plugins/pterminals/"..game.GetMap() );
+	local terminals = Clockwork.kernel:RestoreSchemaData( "plugins/Teriyakiterminals/"..game.GetMap() );
 	
 	for k, v in pairs(terminals) do
 		local entity = ents.Create("cw_terminal");

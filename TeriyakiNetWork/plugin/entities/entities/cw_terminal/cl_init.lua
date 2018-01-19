@@ -43,7 +43,7 @@ end;
 function TerminalShow(activator)
 for k, v in ipairs( ents.FindInSphere(activator:GetPos(),350) ) do
 if v:IsValid() && v:GetClass() == "cw_terminal" then
-print("[pNetwork] CLIENT: Terminal in-range and activated.")
+print("[Network] CLIENT: Terminal in-range and activated.")
 
 surface.CreateFont( "terminal", {
 	font = "verdana",
@@ -80,7 +80,6 @@ else ciD = LocalPlayer():GetSharedVar("citizenID")
 	local butf = vgui.Create( "DColorButton", frame )
 	local butfo = vgui.Create( "DColorButton", frame )
 	local assbutt = vgui.Create( "DColorButton", frame )
-	 -- HAHA ASSBUTT (professionalism by Polis)
 	frame:SetSize( 1050, 525 )
 	frame:Center()
 	frame:SetVisible( true )
